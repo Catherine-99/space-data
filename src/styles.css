@@ -1,13 +1,9 @@
-/*basic colours and layout*/
+/*GENERAL STYLES*/
 body{
     background-color: #06212F;
     font-family: 'inter', 'sans-serif';
     display: grid;
     grid-row: 1fr 3fr;
-}
-header nav{
-    color: #BBC1C9;
-    list-style: none;
 }
 section h2{
     color: #459397;
@@ -21,26 +17,26 @@ main{
     flex-direction: column;
 }
 
-/*header*/
+
+/*HEADER SECTION*/
+/*background*/
 .background {
-    background-image: url(background.svg);
+    background-image: url(backgroundearth.svg);
     background-size:cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    position: relative;
     height: 100vh; 
     width: 100%;
 }
-
 #header-gridbox{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 0.3fr 2fr ;
+    grid-template-rows: 1fr 0.3fr 2fr;
 }
 
+/*nav menu*/
 #nav-flexbox{
-    margin-top: 2rem;
-    margin-right: 5rem;
+    margin: 3rem 5rem 0 0;
     grid-row: 1;
     grid-column: 1/4;
     display: flex;
@@ -49,19 +45,28 @@ main{
     align-content:space-around;
     gap: 3rem;
     justify-self: end;
+    list-style: none;
 }
-#nav-flexbox p{
+#nav-flexbox li{
     font-size: 1.7rem;
+    color: #BBC1C9;
+}
+#nav-flexbox li:hover{
+    color:#459397;
+    cursor: pointer;
+}
+#nav-flexbox li:active{
+    color:#BBC1C9;
+    cursor: pointer;
 }
 
-
+/*logo styling*/
 #logo-box{
     display: grid;
     grid-column: 1;
     grid-row: 2;
     gap: 0;
     margin-left: 8rem;
-
 }
 #logo-box h1, #logo-box h3{
    padding: 0;
@@ -75,99 +80,25 @@ main{
 #logo-box h3{
     font-size: 1.5rem;
     font-weight: 400;
-
 }
 
 
-
-
-
-/*
-.background h1{
-    position: absolute;
-    top: 8%;
-    left: 7%;
-    font-size: 3rem;
-    font-weight: 450;
-}
-
-.background h3{
-    position: absolute;
-    top: 19%;
-    left: 7.1%;
-    font-size: 1.2rem;
-    font-weight: 400;
-    
-}
-
-.apod-nav{
-    position: absolute;
-    left: 70%;
-    top: 2%;
-}
-.mars-rover-nav{
-    position: absolute;
-    left: 75%;
-    top: 2%;
-}
-.space-events-nav{
-    position: absolute;
-    left: 82%;
-    top: 2%;
-}
-
-.background p {
-    font-size: 1.2rem;
-}
-.background p:hover{
-    color: #459397;
-    cursor: pointer;
-}
-*/
-
-
-/*card styles*/
+/*MAIN SECTION CARD STYLES*/
+/*apod card styles*/
 .apod-card{
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr;
     background-color: #051D29;
-    margin-left: 7rem;
-    margin-right: 7rem;
+    margin: 0 7rem;
     border-radius: 50px;
     overflow: scroll;
-}
-.mars-rover-card{
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 1fr;
-    background-color: #051D29;
-    margin: 3rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
-    border-radius: 50px;
-    overflow: scroll;
-}
-
-.apod-card h2, .mars-rover-card h2{
-    grid-column: 1/3;
-    text-align: center;
-    margin-top: 3rem;
-    font-size: 3rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
 }
 .apod-photo-wrapper{
     grid-row: 2;
     margin: 2rem 2rem 7rem 7rem;
     aspect-ratio: 62/75;
     overflow: hidden;
-    
-}
-.apod-card img, .mars-photo{
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
 }
 .apod-card p{
     grid-row: 2;
@@ -180,41 +111,109 @@ main{
     overflow-wrap: break-word;
 }
 
+
+/*mars rover card styles*/
+.mars-rover-card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: #051D29;
+    margin: 3rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 5rem;
+    border-radius: 50px;
+    overflow: scroll;
+}
 .mars-photo-wrapper{
     grid-row: 2;
     grid-column: 1/3;
-    margin: 2rem 7rem 7rem 7rem;
+    margin: 2rem 7rem 1rem 7rem;
     overflow: hidden;
 }
 .mars-rover-card p{
     grid-row: 3;
-    grid-column: 2;
-    text-align: left;
+    grid-column: 1/3;
+    text-align: center;
     color: #BBC1C9;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 200;
     overflow-wrap: break-word;
-
 }
+
 .refresh-button{
     grid-row: 4;
-    grid-column: 2;
+    grid-column: 1/3;
     margin-bottom: 4rem;
-    max-width: 50%;
-    max-width: 20%;
     background-color: #459397;
     border-style: none;
-    border-radius: 10px;
-    padding: 0.5rem;
+    border-radius: 15px;
+    padding: 0.5rem 3rem;
     font-family: 'inter', 'sans-serif';
     color: #051D29;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 .refresh-button:hover{
     background-color: #BBC1C9;
+    cursor: pointer;
 }
 .refresh-button:active{
     background-color: #459397;
+    cursor: pointer;
 }
 
+/*mars and apod general styles*/
+.apod-card h2, .mars-rover-card h2{
+    grid-column: 1/3;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.apod-card img, .mars-photo{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+/*space event section card styles*/
+.space-events-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-template-rows: auto 1fr;
+    gap: 3rem;
+    text-align: center;
+    background-color: #051D29;
+    margin: 0 7rem;
+    border-radius: 50px;
+    overflow: scroll;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.space-events-section article{
+    margin-top: 5rem;
+}
+.space-events-section h2{
+    font-size: 2.8rem;
+    font-weight: 300;
+    display: contents;
+}
+.space-events-section article p, .space-events-section article h3{
+    color: #BBC1C9;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.space-events-section article h3{
+    font-weight: 500;
+}
+.number{
+    color: #459397 !important;
+    font-size: 5rem !important;
+    font-weight: 300 !important;
+}

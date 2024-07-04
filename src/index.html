@@ -5,43 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Data</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
         <section class="background">
             <article id="header-gridbox">
-                <div id="nav-flexbox">
-                    <p class="apod-nav">apod</p>
-                    <p class="mars-rover-nav">mars rover</p>
-                    <p class="space-events-nav">space events</p>
-                </div>
+                <ul id="nav-flexbox">
+                    <li>apod</li>
+                    <li>mars rover</li>
+                    <li>space events</li>
+                </ul>
+
                 <div id="logo-box">
-                    <h1 class="title-large">
-                    space data
-                    </h1>
-                    <h3 class="title-small">
-                    powered by the NASA API
-                    </h3>
+                    <h1>space data</h1>
+                    <h3>powered by the NASA API</h3>
                 </div>
             </article>
-        </section>
-
-        <!--<img src="background.svg" alt="cartoon illustration of planet earth with white stars around it">-->
-        <!--top navigation menu-->
-        
-
-        <!--logo-->
-        
+        </section>        
     </header>
 
-    <main class="card-container">
+    <main>
         <section class="apod-card">
             <h2>astronomy photo of the day</h2>
             <article class="apod-photo-wrapper">
                 <img class="apod-photo" src="placeholder.jpg" alt="description"> 
             </article>
-            
             <p class="apod-description">placeholder paragraph information</p>
         </section>
 
@@ -55,34 +45,38 @@
             <button class="refresh-button">refresh</button>
         </section>
 
-        <section class="space-events-card">
+        <section class="space-events-section">
             <h2>space events</h2>
 
             <article>
                 <h3>number of objects close to earth today</h3>
-                <p>number</p>
-                <p>description</p>
+                <h1 class="number" id="objects-number">80</h1>
+                <p>
+                    "objects near earth are comets and asteroids that have been nudged by the gravitational 
+                    attraction of nearby planets into orbits that allow them to enter the Earth's neighborhood" 
+                </p>
             </article>
 
             <article>
-                <h3>number of objects close to earth today</h3>
-                <p>number</p>
-                <p>description</p>
+                <h3>number of solar flares in the last 30 days</h3>
+                <h1 class="number" id="flares-number">number</h1>
+                <p>
+                    "a solar flare is an intense burst of radiation coming from the release of magnetic energy associated with sunspots. 
+                    Flares are our solar system’s largest explosive events. 
+                    They are seen as bright areas on the sun and they can last from minutes to hours." 
+                </p>
             </article>
 
             <article>
-                <h3>number of objects close to earth today</h3>
-                <p>number</p>
-                <p>description</p>
+                <h3>number of coronal mass ejections in the last 30 days</h3>
+                <h1 class="number">number</h1>
+                <p>
+                    "a coronal mass ejection is a significant ejection of magnetic field and 
+                    accompanying plasma mass from the Sun's corona into the heliosphere." 
+                </p>
             </article>
-
-
-
         </section>
-
     </main>
-
-
     
 </body>
 </html>
