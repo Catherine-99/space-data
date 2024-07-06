@@ -110,6 +110,8 @@ main{
     font-size: 1.6rem;
     font-weight: 200;
     overflow-wrap: break-word;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
 }
 
 

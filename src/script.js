@@ -13,9 +13,11 @@ async function setAstronomyImage() {
 
         let currentImage = document.querySelector(".apod-photo");
         currentImage.setAttribute("src", apodImageUrl);
+        currentImage.setAttribute("alt", apodImageExplanation)
 
         let currentDescription = document.querySelector(".apod-description");
         currentDescription.innerHTML = apodImageExplanation;
+
 
     } catch (error) {
         console.log(`ERROR: ${error}`)
