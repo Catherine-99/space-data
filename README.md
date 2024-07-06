@@ -32,6 +32,8 @@ asynchronous Javascript, and translating a Figma design into a functional websit
 The design was created by myself to visualise the layout and colour scheme of the website before coding.</p>
 
 <img width="299" alt="Screenshot 2024-07-06 at 21 46 42" src="https://github.com/Catherine-99/space-data/assets/142168043/6218704e-0bb5-4fab-a0de-362a7bb80527">
+<br>
+<br>
 
 <h2>Getting Started</h2>
 <h3>Live View</h3>
