@@ -151,7 +151,7 @@ main{
     border-style: none;
     border-radius: 15px;
     padding: 0.5rem 3rem;
-    font-family: 'inter', 'sans-serif';
+    font-family: 'inter', 'Arial', 'sans-serif';
     color: #051D29;
     font-weight: 500;
     font-size: 1.3rem;
