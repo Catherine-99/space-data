@@ -1,7 +1,7 @@
 /*GENERAL STYLES*/
 body{
     background-color: #06212F;
-    font-family: 'inter', 'sans-serif';
+    font-family: 'inter', 'Arial', 'sans-serif';
     display: grid;
     grid-row: 1fr 3fr;
     min-width: 725px;
